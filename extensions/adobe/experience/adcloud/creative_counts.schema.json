@@ -11,27 +11,29 @@
 	"type": "object",
 	"description": "Adobe AdCloud Counts for Creatives Belonging to a Higher Level Entity",
 	"definitions": {
-		"entity": {
+		"creative_counts": {
             "properties": {
-                "xdm:active_creatives": {
+                "active_creatives": {
+                    "title": "Active Creatives",
                     "type": "integer",
-                    "description:": "Active Creative Count",
-                    "meta:xdmType": "int"
+                    "description:": "Active Creative Count"
                 },
-                "xdm:paused_creatives": {
+                "paused_creatives": {
+                    "title": "Paused Creatives",
                     "type": "integer",
-                    "meta:xdmType": "int"
+                    "description:": "Paused Creative Count"
                 },
-                "xdm:removed_creatives": {
+                "removed_creatives": {
+                    "title": "Removed Creatives",
                     "type": "integer",
-                    "meta:xdmType": "int"
+                    "description:": "Removed Creative Count"
                 }
             }
         }
     },
     "allOf": [
         {
-            "$ref": "#/definitions/entity"
+            "$ref": "#/definitions/creative_counts"
         }
     ]
 }

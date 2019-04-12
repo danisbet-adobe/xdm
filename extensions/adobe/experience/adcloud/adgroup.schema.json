@@ -31,8 +31,6 @@
 					"$ref": "https://ns.adobe.com/experience/adcloud/creative_counts",
 					"description": "Count of ads belonging to this ad group, and their status."
 				},
-
-				
 				"campaignInternalId": {
 					"title": "Campaign Unique Identifier",
 					"type": "int",
@@ -41,7 +39,7 @@
 				"bid_level": {
 					"title": "Bid Level",
 					"type": "string",
-					"description:": "What entity determines the bid for all ads owned by this ad group."
+					"description:": "What entity determines the bid for all ads belonging to this ad group."
 				},
 				"mobile_bid_adjustment": {
 					"title": "Mobile Bid Adjustment",
@@ -49,6 +47,9 @@
 					"description": "Percentage determining the change in bid for mobile ads."
 				},
 				"search_max_cpc": {
+                    "title": "Seach Max Cost per Click",
+                    "type": "int",
+                    "description": "Maximum cost per click for ads belonging to this ad group."
 					
 				}
 			}
@@ -60,8 +61,11 @@
 		  "$ref": "https://ns.adobe.com/xdm/context/profile-adcloud#/definitions/profile-adcloud"
 		},
 		{
-		  "$ref": "#/definitions/campaign-all"
+		  "$ref": "#/definitions/adgroups"
 		}
 	],
-	"meta:status": "experimental"
+	"meta:status": "experimental",
+    "required": [
+        "campaignInternalId"
+    ]
 }

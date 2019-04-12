@@ -11,35 +11,39 @@
     "type": "object",
     "description": "Adobe AdCloud Counts for Keywords Belonging to a Higher Level Entity",
     "definitions": {
-        "entity": {
+        "keyword_counts": {
             "properties": {
-                "xdm:active_keywords": {
+                "active_keywords": {
+                    "title": "Active Keywords",
                     "type": "integer",
-                    "description:": "Active Keyword Count",
-                    "meta:xdmType": "int"
+                    "description:": "Active Keyword Count"
                 },
-                "xdm:paused_keywords": {
+                "paused_keywords": {
+                    "title": "Paused Keywords",
                     "type": "integer",
-                    "meta:xdmType": "int"
+                    "description:": "Paused Keyword Count"
                 },
-                "xdm:inactive_keywords": {
+                "inactive_keywords": {
+                    "title": "Inactive Keywords",
                     "type": "integer",
-                    "meta:xdmType": "int"
+                    "description:": "Inactive Keyword Count"
                 },
-                "xdm:removed_keywords": {
+                "removed_keywords": {
+                    "title": "Removed Keywords",
                     "type": "integer",
-                    "meta:xdmType": "int"
+                    "description:": "Removed Keyword Count"
                 },
-                "xdm:disapproved_keywords": {
+                "disapproved_keywords": {
+                    "title": "Disapproved Keywords",
                     "type": "integer",
-                    "meta:xdmType": "int"
+                    "description:": "Disapproved Keyword Count"
                 }
             }
         }
-    }
+    },
     "allOf": [
         {
-            "$ref": "#/definitions/entity"
+            "$ref": "#/definitions/keyword_counts"
         }
     ]
 }
