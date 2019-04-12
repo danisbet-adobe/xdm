@@ -1,70 +1,68 @@
 {
-	"meta:license": [
+    "meta:license": [
         "Copyright 2018 Adobe Systems Incorporated. All rights reserved.",
         "This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license",
         "you may not use this file except in compliance with the License. You may obtain a copy",
         "of the License at https://creativecommons.org/licenses/by/4.0/"
     ],
-	"$schema": "http://json-schema.org/draft-06/schema#",
-	"$id": "https://ns.adobe.com/experience/adcloud/adgroup",
-	"title": "Adobe AdCloud Search Ad Group Entity Full Extension",
-	"type": "object",
-	"meta:extensible": true,
-	"meta:abstract": true,
-	"meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile-adcloud"],
-	"description": "Adobe AdCloud Search Ad Group Entity Full Extension. Contains all Solution added fields.",
-	"definitions": {
-		"adgroup":{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://ns.adobe.com/experience/adcloud/adgroup",
+    "title": "Adobe AdCloud Search Ad Group Entity Full Extension",
+    "type": "object",
+    "meta:extensible": true,
+    "meta:abstract": true,
+    "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile-adcloud"],
+    "description": "Adobe AdCloud Search Ad Group Entity Full Extension. Contains all Solution added fields.",
+    "definitions": {
+        "adgroup":{
             "properties": {
-				"adgroup": {
-					"title": "Adobe Ad Cloud Search Ad Group Top Level Fields",
-					"$ref": "https://ns.adobe.com/experience/adcloud/entity",
-					"description": "Adobe Ad Cloud Top Level Entity Fields."
-				},
-				"keyword_counts": {
-					"title": "Keyword Counts",
-					"$ref": "https://ns.adobe.com/experience/adcloud/keyword_counts",
-					"description": "Count of keywords belonging to this ad group, and their status."
-				},
-				"creative_counts": {
-					"title": "Creative Counts",
-					"$ref": "https://ns.adobe.com/experience/adcloud/creative_counts",
-					"description": "Count of ads belonging to this ad group, and their status."
-				},
-				"campaignInternalId": {
-					"title": "Campaign Unique Identifier",
-					"type": "int",
-					"description": "Unique identifier which represents the primary key for the campaign this ad group belongs to. Use for joining with campaigns."
-				},
-				"bid_level": {
-					"title": "Bid Level",
-					"type": "string",
-					"description:": "What entity determines the bid for all ads belonging to this ad group."
-				},
-				"mobile_bid_adjustment": {
-					"title": "Mobile Bid Adjustment",
-					"type": "int",
-					"description": "Percentage determining the change in bid for mobile ads."
-				},
-				"search_max_cpc": {
+                "adgroup": {
+                    "title": "Adobe Ad Cloud Search Ad Group Top Level Fields",
+                    "$ref": "https://ns.adobe.com/experience/adcloud/entity",
+                    "description": "Adobe Ad Cloud Top Level Entity Fields."
+                },
+                "keyword_counts": {
+                    "title": "Keyword Counts",
+                    "$ref": "https://ns.adobe.com/experience/adcloud/keyword_counts",
+                    "description": "Count of keywords belonging to this ad group, and their status."
+                },
+                "creative_counts": {
+                    "title": "Creative Counts",
+                    "$ref": "https://ns.adobe.com/experience/adcloud/creative_counts",
+                    "description": "Count of ads belonging to this ad group, and their status."
+                },
+                "campaignInternalId": {
+                    "title": "Campaign Unique Identifier",
+                    "type": "int",
+                    "description": "Unique identifier which represents the primary key for the campaign this ad group belongs to. Use for joining with campaigns."
+                },
+                "bidLevel": {
+                    "title": "Bid Level",
+                    "type": "string",
+                    "description:": "What entity determines the bid for all ads belonging to this ad group."
+                },
+                "mobileBidAdjustment": {
+                    "title": "Mobile Bid Adjustment",
+                    "type": "int",
+                    "description": "Percentage determining the change in bid for mobile ads."
+                },
+                "searchMaxCPC": {
                     "title": "Seach Max Cost per Click",
                     "type": "int",
                     "description": "Maximum cost per click for ads belonging to this ad group."
-					
-				}
-			}
-
+                }
+            }
         }
-	},
-	"allOf": [
-		{
-		  "$ref": "https://ns.adobe.com/xdm/context/profile-adcloud#/definitions/profile-adcloud"
-		},
-		{
-		  "$ref": "#/definitions/adgroups"
-		}
-	],
-	"meta:status": "experimental",
+    },
+    "allOf": [
+        {
+          "$ref": "https://ns.adobe.com/xdm/context/profile-adcloud#/definitions/profile-adcloud"
+        },
+        {
+          "$ref": "#/definitions/adgroups"
+        }
+    ],
+    "meta:status": "experimental",
     "required": [
         "campaignInternalId"
     ]

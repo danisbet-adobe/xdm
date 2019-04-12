@@ -13,27 +13,27 @@
     "definitions": {
         "keyword_counts": {
             "properties": {
-                "active_keywords": {
+                "activeKeywords": {
                     "title": "Active Keywords",
                     "type": "integer",
                     "description:": "Active Keyword Count"
                 },
-                "paused_keywords": {
+                "pausedKeywords": {
                     "title": "Paused Keywords",
                     "type": "integer",
                     "description:": "Paused Keyword Count"
                 },
-                "inactive_keywords": {
+                "inactiveKeywords": {
                     "title": "Inactive Keywords",
                     "type": "integer",
                     "description:": "Inactive Keyword Count"
                 },
-                "removed_keywords": {
+                "removedKeywords": {
                     "title": "Removed Keywords",
                     "type": "integer",
                     "description:": "Removed Keyword Count"
                 },
-                "disapproved_keywords": {
+                "disapprovedKeywords": {
                     "title": "Disapproved Keywords",
                     "type": "integer",
                     "description:": "Disapproved Keyword Count"
