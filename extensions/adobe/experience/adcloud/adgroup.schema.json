@@ -21,14 +21,14 @@
                     "$ref": "https://ns.adobe.com/experience/adcloud/entity",
                     "description": "Adobe Ad Cloud Top Level Entity Fields."
                 },
-                "keyword_counts": {
+                "keywordCounts": {
                     "title": "Keyword Counts",
-                    "$ref": "https://ns.adobe.com/experience/adcloud/keyword_counts",
+                    "$ref": "https://ns.adobe.com/experience/adcloud/entitycounts",
                     "description": "Count of keywords belonging to this ad group, and their status."
                 },
-                "creative_counts": {
+                "creativeCounts": {
                     "title": "Creative Counts",
-                    "$ref": "https://ns.adobe.com/experience/adcloud/creative_counts",
+                    "$ref": "https://ns.adobe.com/experience/adcloud/entitycounts",
                     "description": "Count of ads belonging to this ad group, and their status."
                 },
                 "campaignInternalId": {
