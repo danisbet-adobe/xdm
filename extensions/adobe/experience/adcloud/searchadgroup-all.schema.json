@@ -6,40 +6,49 @@
         "of the License at https://creativecommons.org/licenses/by/4.0/"
     ],
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$id": "https://ns.adobe.com/experience/adcloud/adgroup",
-    "title": "Adobe AdCloud Search Ad Group Entity Full Extension",
+    "$id": "https://ns.adobe.com/experience/adcloud/searchadgroup-all",
+    "title": "Adobe AdCloud Search Adgroup Entity Full Extension",
     "type": "object",
     "meta:extensible": true,
     "meta:abstract": true,
     "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile-adcloud"],
-    "description": "Adobe AdCloud Search Ad Group Entity Full Extension. Contains all Solution added fields.",
+    "description": "Adobe AdCloud Search Adgroup Entity Full Extension. Contains all Solution added fields.",
     "definitions": {
-        "adgroup":{
+        "searchadgroup-all":{
             "properties": {
                 "adgroup": {
-                    "title": "Adobe Ad Cloud Search Ad Group Top Level Fields",
+                    "title": "Adobe Ad Cloud Search Adgroup Top Level Fields",
                     "$ref": "https://ns.adobe.com/experience/adcloud/entity",
                     "description": "Adobe Ad Cloud Top Level Entity Fields."
                 },
                 "keywordCounts": {
                     "title": "Keyword Counts",
                     "$ref": "https://ns.adobe.com/experience/adcloud/entitycounts",
-                    "description": "Count of keywords belonging to this ad group, and their status."
+                    "description": "Count of keywords belonging to this adgroup, and their status."
                 },
                 "creativeCounts": {
                     "title": "Creative Counts",
                     "$ref": "https://ns.adobe.com/experience/adcloud/entitycounts",
-                    "description": "Count of ads belonging to this ad group, and their status."
+                    "description": "Count of ads belonging to this adgroup, and their status."
                 },
                 "campaignInternalId": {
                     "title": "Campaign Unique Identifier",
                     "type": "int",
-                    "description": "Unique identifier which represents the primary key for the campaign this ad group belongs to. Use for joining with campaigns."
+                    "description": "Unique identifier which represents the primary key for the campaign this adgroup belongs to. Use for joining with campaigns."
                 },
                 "bidLevel": {
                     "title": "Bid Level",
                     "type": "string",
-                    "description:": "What entity determines the bid for all ads belonging to this ad group."
+                    "description:": "What entity determines the bid for all ads belonging to this adgroup.",
+                    "meta:enum": {
+                        "gender": "Gender",
+                        "placement": "Placement",
+                        "vertical": "Vertical",
+                        "age_range": "Age Range",
+                        "keyword": "Keyword",
+                        "adgroup": "Adgroup",
+                        "user_interest_and_list": "User Interest and List"
+                    }
                 },
                 "mobileBidAdjustment": {
                     "title": "Mobile Bid Adjustment",
@@ -49,7 +58,7 @@
                 "searchMaxCPC": {
                     "title": "Seach Max Cost per Click",
                     "type": "int",
-                    "description": "Maximum cost per click for ads belonging to this ad group."
+                    "description": "Maximum cost per click for ads belonging to this adgroup."
                 }
             }
         }
@@ -59,7 +68,7 @@
           "$ref": "https://ns.adobe.com/xdm/context/profile-adcloud#/definitions/profile-adcloud"
         },
         {
-          "$ref": "#/definitions/adgroups"
+          "$ref": "#/definitions/searchadgroup-all"
         }
     ],
     "meta:status": "experimental",

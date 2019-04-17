@@ -11,7 +11,7 @@
     "type": "object",
     "description": "Adobe AdCloud Counts for Creatives Belonging to a Higher Level Entity",
     "definitions": {
-        "entity_counts": {
+        "entitycounts": {
             "properties": {
                 "active": {
                     "title": "Active Count",
