@@ -13,7 +13,7 @@ Used to indicate the behavior of time partitioned semantics when composed into d
 ## Schema Hierarchy
 
 * Time-series Schema `https://ns.adobe.com/xdm/data/time-series`
-  * [Extensibility Base Schema](../common/extensible.schema.md) `https://ns.adobe.com/xdm/common/extensible`
+  * [Extensibility base schema](../common/extensible.schema.md) `https://ns.adobe.com/xdm/common/extensible`
 
 
 ## Time-series Schema Example
@@ -96,6 +96,7 @@ The primary event type for this time-series record.
 | `commerce.productViews` | View(s) of a product have occurred. |
 | `commerce.purchases` | An order has been accepted. Purchase is the only required action in a commerce conversion. Purchase must have a product list referenced. |
 | `commerce.saveForLaters` | Product list is saved for future use. Example a product wish list. |
+| `delivery.feedback` | Feedback events for a delivery. Example feedback events for an email delivery. |
 
 
 
